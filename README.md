@@ -33,7 +33,11 @@ dynservice:demo.HelloWorld=com.github.alexanderfefelov.bgbilling.dynservice.demo
 
 Теперь выполните:
 
-```
+```bash
+#                                                                       Модуль  Сервис                                                                        
+#                                                                         │       │
+#                                                                        ┌┴─┐ ┌───┴────┐
+#                                                                        │  │ │        │
 http --verbose --check-status \
   POST http://bgbilling-server.backpack.test:63081/billing/executer/json/demo/HelloWorld \
       method=helloWorld \
