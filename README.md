@@ -77,6 +77,73 @@ Date: Tue, 19 Jan 2021 04:30:49 GMT
 {"status":"ok","exception":null,"message":"","tag":null,"data":{"return":"Hello, World!"}}
 ```
 
+## Калькулятор
+
+- [Calculator.java](dyn/com/github/alexanderfefelov/bgbilling/dynservice/demo/Calculator.java)
+- [CalculatorImpl.java](dyn/com/github/alexanderfefelov/bgbilling/dynservice/demo/CalculatorImpl.java)
+
+Добавьте в конфигурацию ядра:
+
+```properties
+# Dynservice: Калькулятор
+#
+#         Модуль  Сервис                             Класс сервиса
+#           │       │                                      │
+#          ┌┴─┐ ┌───┴────┐ ┌───────────────────────────────┴──────────────────────────────────┐
+#          │  │ │        │ │                                                                  │
+dynservice:demo.Calculator=com.github.alexanderfefelov.bgbilling.dynservice.demo.CalculatorImpl
+```
+
+Попробуйте:
+
+```bash
+#                                                                       Модуль  Сервис                                                                        
+#                                                                         │       │
+#                                                                        ┌┴─┐ ┌───┴────┐
+#                                                                        │  │ │        │
+http --verbose --check-status \
+  POST http://bgbilling-server.backpack.test:63081/billing/executer/json/demo/Calculator \
+      method=calculate \
+      params:='{"a": 3.14159, "b": 2.71828, "op": "add"}' \
+      user:='{"user": "admin", "pswd": "admin"}'
+```
+
+и в ответ на запрос:
+
+```
+POST /billing/executer/json/demo/Calculator HTTP/1.1
+Accept: application/json, */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 120
+Content-Type: application/json
+Host: bgbilling-server.backpack.test:63081
+User-Agent: HTTPie/1.0.3
+
+{
+    "method": "calculate",
+    "params": {
+        "a": 3.14159,
+        "b": 2.71828,
+        "op": "add"
+    },
+    "user": {
+        "pswd": "admin",
+        "user": "admin"
+    }
+}
+```
+
+вы получите:
+
+```
+HTTP/1.1 200 OK
+Content-Length: 82
+Date: Tue, 19 Jan 2021 13:25:00 GMT
+
+{"status":"ok","exception":null,"message":"","tag":null,"data":{"return":5.85987}}
+```
+
 ## Что дальше?
 
 * Посмотрите, как можно расширить функционал BGBilling с помощью других механизмов:
