@@ -76,3 +76,9 @@ Date: Tue, 19 Jan 2021 04:30:49 GMT
 
 {"status":"ok","exception":null,"message":"","tag":null,"data":{"return":"Hello, World!"}}
 ```
+
+## Что дальше?
+
+* Посмотрите, как можно расширить функционал BGBilling с помощью других механизмов:
+  * Dynaction - https://github.com/alexanderfefelov/bgbilling-dynaction-demo, 
+  * Сервлеты - https://github.com/alexanderfefelov/bgbilling-servlet-demo.
