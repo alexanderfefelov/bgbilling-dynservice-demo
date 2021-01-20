@@ -2,7 +2,7 @@
 
 ## Что это?
 
-bgbilling-dynservice-demo - это демонстрационная реализация dynservice для использования совместно с сервером [BGBilling](https://bgbilling.ru/).
+bgbilling-dynservice-demo — это демонстрационная реализация dynservice для использования совместно с сервером [BGBilling](https://bgbilling.ru/).
 
 ## Как это установить?
 
@@ -77,7 +77,7 @@ Date: Tue, 19 Jan 2021 04:30:49 GMT
 {"status":"ok","exception":null,"message":"","tag":null,"data":{"return":"Hello, World!"}}
 ```
 
-## Калькулятор
+## Калькулятор — передаём параметры
 
 - [Calculator.java](dyn/com/github/alexanderfefelov/bgbilling/dynservice/demo/Calculator.java)
 - [CalculatorImpl.java](dyn/com/github/alexanderfefelov/bgbilling/dynservice/demo/CalculatorImpl.java)
@@ -147,5 +147,5 @@ Date: Tue, 19 Jan 2021 13:25:00 GMT
 ## Что дальше?
 
 * Посмотрите, как можно расширить функционал BGBilling с помощью других механизмов:
-  * Dynaction - https://github.com/alexanderfefelov/bgbilling-dynaction-demo, 
-  * Сервлеты - https://github.com/alexanderfefelov/bgbilling-servlet-demo.
+  * Dynaction — https://github.com/alexanderfefelov/bgbilling-dynaction-demo, 
+  * Сервлеты — https://github.com/alexanderfefelov/bgbilling-servlet-demo.
