@@ -146,6 +146,8 @@ Date: Tue, 19 Jan 2021 13:25:00 GMT
 
 ## Что дальше?
 
+* Узнайте, как сделать то же самое на JavaScript, Python или Ruby:
+  * https://github.com/alexanderfefelov/bgbilling-dynservice-demo-polyglot
 * Посмотрите, как можно расширить функционал BGBilling с помощью других механизмов:
   * Dynaction — https://github.com/alexanderfefelov/bgbilling-dynaction-demo, 
   * Сервлеты — https://github.com/alexanderfefelov/bgbilling-servlet-demo.
